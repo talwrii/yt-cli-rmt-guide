@@ -5,7 +5,7 @@ This pages describes how to remotely control youtube running within a browser fr
 
 In practice this sort of script may not be used directly from the command-line but rather attached to a [keyboard shortcut](https://en.wikipedia.org/wiki/Keyboard_shortcut) or run from another script that forms a larger process.
 
-This approach only works for Linux due to the limitations of the Chrome extension it uses. If you have programming experience you may be able to adapt the approach for another operating system. I would direct anyone interested in doing this to [mozeidon][2]  as an example of a remote control from *Chrome* which can be run from the command-line.
+This approach only works for Linux due to the limitations of the Chrome extension it uses. If you have programming experience you may be able to adapt the approach for another operating system. I would direct anyone interested in doing this to [mozeidon](https://github.com/egovelox/mozeidon/) as an example of a remote control from *Chrome* which can be run from the command-line.
 
 This approach only works for Chromium-based browsers. I got it working with Brave, but Vivalid is another Chrome-based browser.
 
@@ -20,7 +20,7 @@ You can do things like:
 * Get the current position in the audio. Suitable for adding to notes or shared with others.
 * Get the length of the video
 
-Obtaining the may be particularly useful when combined [yt-dlp][1] to obtain subtitles for the video.
+Obtaining the may be particularly useful when combined [yt-dlp](https://github.com/yt-dlp/yt-dlp) to obtain subtitles for the video.
 
 # Setting everything up
 Unfortunately stream has been removed from the Chrome extension store, has a build process that depends on deprecated libraries, and requires an out of date build process. It does however still work.
@@ -118,8 +118,8 @@ A shortcut to jump to the youtube tab may be sufficient for your uses. I have do
 It is to be noted that the youtube website provides a variety of social and recommednation featues that other approaches do not support.
 
 ## References
-[1] [yt-dlp](https://github.com/yt-dlp/yt-dlp)
-[2] [mozeidon](https://github.com/egovelox/mozeidon/)
+1. [yt-dlp](https://github.com/yt-dlp/yt-dlp)
+2. [mozeidon](https://github.com/egovelox/mozeidon/)
 
 ## About me
 I am **@readwithai**. I create tools for reading, research and agency sometimes using the markdown editor [Obsidian](https://readwithai.substack.com/p/what-exactly-is-obsidian).
