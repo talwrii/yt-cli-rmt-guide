@@ -5,7 +5,7 @@ This pages describes how to remotely control youtube running within a browser fr
 
 In practice this sort of script may not be used directly from the command-line but rather attached to a [keyboard shortcut](https://en.wikipedia.org/wiki/Keyboard_shortcut) or run from another script that forms a larger process.
 
-This approach only works for Linux due to the limitations of the Chrome extension it uses. If you have programming experience you may be able to adapt the approach for another operating system. I would direct anyone interested in doing this to [https://github.com/egovelox/mozeidon/](mozeidon) as an example of a remote control from *Chrome* which can be run from the command-line.
+This approach only works for Linux due to the limitations of the Chrome extension it uses. If you have programming experience you may be able to adapt the approach for another operating system. I would direct anyone interested in doing this to [mozeidon][mozeidon]  as an example of a remote control from *Chrome* which can be run from the command-line.
 
 This approach only works for Chromium-based browsers. I got it working with Brave, but Vivalid is another Chrome-based browser.
 
@@ -106,6 +106,8 @@ perl -e 'my ($a,$b) = @ARGV; print(int($a * 1000000 / $b * 100) . "%\n")' "$pos"
 mozeidon tabs  get  | jq '.[] | .[] | select(.url | test("youtube\\.com")) | .url ' -rc | { read line ; echo $line\&t=$(playerctl position | perl -pe '$_ -= 10') ; }
 ```
 
+I use this script (and others) to refer to videos while taking notes in [Obsidian](https://readwithai.substack.com/p/what-exactly-is-obsidian). If you are interested in note taking you might like to read my [review of note taking in Obsidian](https://readwithai.substack.com/p/note-taking-with-obsidian-much-of).
+
 ## Alternatives
 [ytmdesktop](https://github.com/ytmdesktop/ytmdesktop/releases) is a desktop app for youtube which can be [remotely controlled via http](https://github.com/ytmdesktop/ytmdesktop/wiki/Remote-Control-API). There tends to be a risk that such players attached to a changing website like google will stop working unless they have dedicated maintainers.
 
@@ -117,6 +119,7 @@ It is to be noted that the youtube website provides a variety of social and reco
 
 ## References
 [yt-dlp](https://github.com/yt-dlp/yt-dlp)
+[mozeidon](https://github.com/egovelox/mozeidon/)
 
 ## About me
 I am **@readwithai**. I create tools for reading, research and agency sometimes using the markdown editor [Obsidian](https://readwithai.substack.com/p/what-exactly-is-obsidian).
