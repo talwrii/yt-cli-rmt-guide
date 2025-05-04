@@ -10,7 +10,7 @@ This approach only works for Linux due to the limitations of the Chrome extensio
 This approach only works for Chromium-based browsers. I got it working with Brave, but Vivalid is another Chrome-based browser.
 
 # How this works
-This entire page is effectively alternative and more complete documentation for [streamkeys](https://github.com/egovelox/mozeidon/) which, almost incidentally provides this feature. This page, however, focuses on command-line usage for Linux - documents and works around some issues in streamkeys, and is an easy-to-find article on the topic of controlling youtube from the command-line.
+This entire page is effectively alternative and more complete documentation for [streamkeys](https://github.com/berrberr/streamkeys) which, almost incidentally provides this feature. This page, however, focuses on command-line usage for Linux - documents and works around some issues in streamkeys, and is an easy-to-find article on the topic of controlling youtube from the command-line.
 
 Streamkeys was written with the intention of controlling youtube, or other media players, running with Chrome from any other tabs. However, incidentally it also provides support for MPRIS which is a generally linux protocol for controlling multimedia players from the command-line. This standard can be used to cotrol youtube playback from the command-line.
 
