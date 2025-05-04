@@ -118,8 +118,8 @@ A shortcut to jump to the youtube tab may be sufficient for your uses. I have do
 It is to be noted that the youtube website provides a variety of social and recommednation featues that other approaches do not support.
 
 ## References
-[yt-dlp](https://github.com/yt-dlp/yt-dlp)
-[mozeidon](https://github.com/egovelox/mozeidon/)
+[yt-dlp] [yt-dlp](https://github.com/yt-dlp/yt-dlp)
+[mozeidon] [mozeidon](https://github.com/egovelox/mozeidon/)
 
 ## About me
 I am **@readwithai**. I create tools for reading, research and agency sometimes using the markdown editor [Obsidian](https://readwithai.substack.com/p/what-exactly-is-obsidian).
