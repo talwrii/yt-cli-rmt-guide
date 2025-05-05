@@ -21,13 +21,13 @@ I use the following scripts (amongst others):
 **skip**: Skip 10 seconds forward (or number of seconds given)
 ```
 #!/bin/bash
-playerctl position | perl -pe "\$_ = \$_ + ${1-10}" | xargs playerctl position; playerctl position
+playerctl ${1-10}+
 ```
 
 **back**: Skip 10 seconds backwards (or number of seconds given)
 ```
 #!/bin/bash
-skip ${1:--10}
+playerctl ${1-10}-
 ```
 
 **pos**: Return the position into the video
