@@ -3,16 +3,16 @@
 
 This pages describes how to remotely control youtube running within a browser from the command-line.
 
-In practice this sort of script may not be used directly from the command-line but rather attached to a [keyboard shortcut](https://en.wikipedia.org/wiki/Keyboard_shortcut) or run from another script that forms a larger process.
+In practice,this sort of script may not be used directly from the command-line but rather attached to a [keyboard shortcut](https://en.wikipedia.org/wiki/Keyboard_shortcut) or run from another script which caries out a task.
 
-This approach only works for Linux due to the limitations of the Chrome extension it uses. If you have programming experience you may be able to adapt the approach for another operating system. I would direct anyone interested in doing this to [mozeidon](https://github.com/egovelox/mozeidon/) as an example of a remote control from *Chrome* which can be run from the command-line.
+This approach only works for Linux due to the limitations of the Chrome extension it uses. If you have programming experience you may be able to adapt this plugin ti another operating system. I would direct anyone interested in doing this to [mozeidon](https://github.com/egovelox/mozeidon/) as an example of a remote control from *Chrome itself* which can be run from the command-line.
 
-This approach only works for Chromium-based browsers. I got it working with Brave, but Vivalid is another Chrome-based browser.
+The approach presented here only works for Chromium-based browsers. I got it working with Brave, but Vivaldi is another Chrome-based browser.
 
 # How this works
-This entire page is effectively alternative and more complete documentation for [streamkeys](https://github.com/berrberr/streamkeys) which, almost incidentally provides this feature. This page, however, focuses on command-line usage for Linux - documents and works around some issues in streamkeys, and is an easy-to-find article on the topic of controlling youtube from the command-line.
+This entire page is effectively alternative and more complete documentation for [streamkeys](https://github.com/berrberr/streamkeys) which, almost incidentally, provides the features we need. This page focuses on command-line usage for Linux,  documents and works around some issues in streamkeys, and is an easy-to-find article on the topic of controlling YouTube from the command-line.
 
-Streamkeys was written with the intention of controlling youtube, or other media players, running with Chrome from any other tabs. However, incidentally it also provides support for MPRIS which is a generally linux protocol for controlling multimedia players from the command-line. This standard can be used to cotrol youtube playback from the command-line.
+Streamkeys was written with the intention of controlling YouTube or other media websites running withi. Chrome from any other tabs. However, incidentally, it also provides support for MPRIS which is a generally Linux protocol for controlling multimedia players from the other programs. This standard can be used to cotrol youtube playback from the command-line, using playbackctl.
 
 You can do things like:
 * Stop the player
@@ -20,12 +20,12 @@ You can do things like:
 * Get the current position in the audio. Suitable for adding to notes or shared with others.
 * Get the length of the video
 
-Obtaining the may be particularly useful when combined [yt-dlp](https://github.com/yt-dlp/yt-dlp) to obtain subtitles for the video.
+Obtaining the position may be particularly useful when combined [yt-dlp](https://github.com/yt-dlp/yt-dlp) to obtain subtitles for the video.
 
 # Setting everything up
-Unfortunately stream has been removed from the Chrome extension store, has a build process that depends on deprecated libraries, and requires an out of date build process. It does however still work.
+Unfortunately streamkeys has been removed from the Chrome extension store, has a build process that depends on deprecated libraries that are ni longer mauntained, and requires an out-of-date build tools. It does, however, still work.
 
-You need to download streamkeys, build it, and manually add it to Chrome. This may be good experience for you if you ever intend to develop a browser extension.
+You need to download the streamkeys source code, build it, and manually add it to Chrome. This may be good experience for you if you ever intend to develop a browser extension.
 
 Requirements:
 1. [uv](https://github.com/astral-sh/uv) is needed to use an old version of python required by `node-gyp` which is required by `node-sass`
@@ -33,7 +33,7 @@ Requirements:
 1. `python3-dbus` is needed for the interface used to communicate with the extension from the command-line
 1. `playerctl` is a command-line tool to communicate with mediaplayers (includig streamkeys after some configuration).
 
-Both of these tools are standard, broadly used develoment tools
+Both uv and nvm are standard, broadly used development tools
 
 To install requiments:
 1. `sudo apt-get install pipx`
@@ -63,11 +63,11 @@ To install streamkeys:
 
 
 To enable streamkeys for use with debug (MPIRS), you must run a script.
+
 1. Find the id of the streamkeys extension. Go to `brave://extensions/` and click on the Details of streamkeys package. This should have an ID - copy this ID.
 2. Run the script `python3 ./build/unpacked-dev/native/mpris_host_setup.py install $ID` with this ID.
 
-
-The command `playerctl pause` should now pause youtube and `playerctl play` start it.
+The command `playerctl pause` should now pause youtube and `playerctl play` start it again.
 
 ## Usage
 You can use `playerctl` from the command-line. You may like to explore the documentation. This script can be wrapped for ther purposes.
